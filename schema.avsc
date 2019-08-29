@@ -1,0 +1,11 @@
+{"namespace": "demo.avro",
+ "type": "record",
+ "name": "dev",
+
+ "fields": [
+     {"name": "timestamp",  "type": "long"},
+     {"name": "short_link", "type": "string"},
+     {"name": "long_link",  "type": "string"}
+ ]
+
+}
