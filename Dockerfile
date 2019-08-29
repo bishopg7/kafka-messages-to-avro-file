@@ -4,9 +4,9 @@ RUN pip install kafka-python avro-python3
 
 RUN mkdir /srv/shortlinks-to-avro
 WORKDIR /srv/shortlinks-to-avro
-COPY study.py schema.avsc ./
+COPY start.py schema.avsc ./
 
-CMD["python", "./study.py"]
+CMD["python", "./start.py"]
 
 
 
