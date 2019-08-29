@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:alpine
 
 RUN pip install kafka-python avro-python3
 
