@@ -31,7 +31,7 @@ def msg_to_avro():
         #print("%s;%s;%s" %(msg_list[1], msg_list[0], msg_list[5]))
         writer.append({"timestamp":  int(msg_list[1]),
                        "short_link": msg_list[0],
-                       "long_link":  msg_list[5]
+                       "long_link":  msg_list[4]
                        })
     writer.close()
 
