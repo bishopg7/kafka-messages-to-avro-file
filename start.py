@@ -11,16 +11,16 @@ topic = os.environ["KAKFA_TOPIC"]
 group_id = os.environ["KAFKA_GROUP_ID"]
 auto_offset_reset  = os.environ["KAFKA_OFFSET_RESET"]
 
-consumer = KafkaConsumer(topic,
-                         group_id=group_id,
-                         bootstrap_servers=bootstrap_servers,
-                         auto_offset_reset=auto_offset_reset,
-                         enable_auto_commit=True,
-                         max_poll_records=5000,
-                         fetch_max_wait_ms=1000
-                         )
-
 def msg_to_avro():
+    consumer = KafkaConsumer(topic,
+                             group_id=group_id,
+                             bootstrap_servers=bootstrap_servers,
+                             auto_offset_reset=auto_offset_reset,
+                             enable_auto_commit=True,
+                             max_poll_records=5000,
+                             fetch_max_wait_ms=1000
+                             )
+
     schema = avro.schema.Parse(open("schema.avsc","r").read())
     dataFile = open("out.avro", "ab")
     writer = DataFileWriter(dataFile, DatumWriter(), schema)

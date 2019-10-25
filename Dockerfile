@@ -6,7 +6,4 @@ RUN mkdir /srv/kafka-messages-to-avro-file
 WORKDIR /srv/kafka-messages-to-avro-file
 COPY start.py schema.avsc ./
 
-CMD["python", "./start.py"]
-
-
-
+CMD ["python", "./start.py"]
