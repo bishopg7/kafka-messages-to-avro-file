@@ -1,4 +1,4 @@
-App in docker, which read messages from kafka's topic splited ";" and write some data in avro file according to schema.avsc.
+App in docker which reads messages from kafka's topic splited ";" and writes some data in avro file according to schema.avsc.
 
 Build & run:
 ~~~~
